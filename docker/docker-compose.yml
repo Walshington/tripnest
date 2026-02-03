@@ -1,0 +1,41 @@
+# Run from this directory: cd docker && docker compose up
+# App entrypoint runs db:push before starting the dev server (no separate migrate container)
+
+services:
+  db:
+    image: postgres:18.1-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: tripnest
+      POSTGRES_PASSWORD: tripnest
+      POSTGRES_DB: tripnest
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U tripnest -d tripnest"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  app:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    restart: "no"
+    ports:
+      - "3000:3000"
+    environment:
+      DATABASE_URL: postgresql://tripnest:tripnest@db:5432/tripnest
+      CHOKIDAR_USEPOLLING: "true"
+    volumes:
+      - ..:/app
+      - app_node_modules:/app/node_modules
+    depends_on:
+      db:
+        condition: service_healthy
+
+volumes:
+  postgres_data:
+  app_node_modules:
