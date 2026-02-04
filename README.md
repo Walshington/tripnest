@@ -1,13 +1,41 @@
-Welcome to your new TanStack app! 
+TripNest
 
 # Getting Started
 
-To run this application:
+Copy `.env.example` to `.env` at the project root and set the values.
+
+## Docker (recommended)
+
+**Prerequisites:** Docker and Docker Compose.
+
+From the project root:
 
 ```bash
-pnpm install
-pnpm dev
+docker compose up    # start
+docker compose down  # stop
 ```
+
+The app and Postgres run in containers. The app runs `pnpm db:push` on startup, then the dev server with hot reload (source is mounted from your machine).
+
+- **App:** http://localhost:3000
+- **PostgreSQL:** localhost:5432
+
+## Local (no Docker)
+
+1. **Install PostgreSQL** and create a database.
+
+2. **Apply the schema** (first time only):
+   ```bash
+   pnpm db:push
+   ```
+
+3. **Install and run:**
+   ```bash
+   pnpm install
+   pnpm dev
+   ```
+
+- App: http://localhost:3000
 
 # Building For Production
 
@@ -44,7 +72,7 @@ pnpm check
 
 ## Setting up Clerk
 
-- Set the `VITE_CLERK_PUBLISHABLE_KEY` in your `.env.local`.
+Clerk keys go in `.env` (see `.env.example`).
 
 
 

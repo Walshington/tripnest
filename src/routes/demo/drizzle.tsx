@@ -158,7 +158,7 @@ function DemoDrizzle() {
                 <code className="px-2 py-1 rounded bg-black/30 text-purple-300">
                   DATABASE_URL
                 </code>{' '}
-                in .env.local
+                in .env
               </li>
               <li>
                 Run:{' '}
