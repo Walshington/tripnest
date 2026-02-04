@@ -11,3 +11,4 @@ dist-ssr
 .env.*
 !.env.example
 .DS_Store
+README.md

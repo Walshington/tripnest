@@ -18,11 +18,12 @@ You can run the app and its PostgreSQL database in Docker. The app container run
 From the project root:
 
 ```bash
-cd docker && docker compose --env-file ../.env.local up
+docker compose up    # start
+docker compose down  # stop
 ```
 
-- **App:** http://localhost:3000  
-- **PostgreSQL:** localhost:5432 (user `tripnest`, password `tripnest`, database `tripnest`)
+- **App:** http://localhost:3000
+- **PostgreSQL:** localhost:5432
 
 # Building For Production
 
@@ -59,7 +60,7 @@ pnpm check
 
 ## Setting up Clerk
 
-- Set the `VITE_CLERK_PUBLISHABLE_KEY` in your `.env.local`.
+- Set the `VITE_CLERK_PUBLISHABLE_KEY` in your `.env`.
 
 
 
