@@ -1,4 +1,3 @@
-# Dev image: install deps; source is mounted at runtime for hot reload
 FROM node:24-alpine
 
 RUN corepack enable && corepack prepare pnpm@latest --activate

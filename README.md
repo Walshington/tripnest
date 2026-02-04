@@ -1,4 +1,4 @@
-Welcome to your new TanStack app! 
+TripNest
 
 # Getting Started
 
@@ -8,6 +8,21 @@ To run this application:
 pnpm install
 pnpm dev
 ```
+
+# Docker
+
+You can run the app and its PostgreSQL database in Docker. The app container runs `pnpm db:push` on startup to apply the Drizzle schema, then starts the dev server with hot reload (source is mounted from your machine).
+
+**Prerequisites:** Docker and Docker Compose.
+
+From the project root:
+
+```bash
+cd docker && docker compose up
+```
+
+- **App:** http://localhost:3000  
+- **PostgreSQL:** localhost:5432 (user `tripnest`, password `tripnest`, database `tripnest`)
 
 # Building For Production
 
