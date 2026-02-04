@@ -18,7 +18,7 @@ You can run the app and its PostgreSQL database in Docker. The app container run
 From the project root:
 
 ```bash
-cd docker && docker compose up
+cd docker && docker compose --env-file ../.env.local up
 ```
 
 - **App:** http://localhost:3000  
