@@ -7,9 +7,9 @@
 	},
 	"files": {
 		"ignoreUnknown": false,
+		"ignores": [".*", ".*/**"],
 		"includes": [
 			"**/src/**/*",
-			"**/.vscode/**/*",
 			"**/index.html",
 			"**/vite.config.ts",
 			"!**/src/routeTree.gen.ts",
