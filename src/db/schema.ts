@@ -1,3 +1,3 @@
 /* Add tables here */
 
-export {}
+export {};
