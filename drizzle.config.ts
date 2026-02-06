@@ -4,7 +4,7 @@ import { defineConfig } from 'drizzle-kit'
 config({ path: ['.env'] })
 
 const url = process.env.POSTGRES_URL
-if (!url) throw new Error('POSTGRES_URL is required for Drizzle')
+if (!url) throw new Error('POSTGRES_URL environment variable is required')
 
 export default defineConfig({
   out: './drizzle',
