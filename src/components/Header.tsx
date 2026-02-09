@@ -2,7 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { Home, Menu, X } from "lucide-react";
 
 import { useState } from "react";
-import ClerkHeader from "../integrations/clerk/header-user.tsx";
+import ClerkHeader from "@/integrations/clerk/header-user";
 
 export default function Header() {
 	const [isOpen, setIsOpen] = useState(false);
