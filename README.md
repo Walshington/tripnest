@@ -15,8 +15,6 @@ docker compose up    # start
 docker compose down  # stop
 ```
 
-The app and Postgres run in containers. The app runs `pnpm db:push` on startup, then the dev server with hot reload (source is mounted from your machine).
-
 - **App:** http://localhost:3000
 - **PostgreSQL:** localhost:5432
 
@@ -53,22 +51,15 @@ This project uses [Vitest](https://vitest.dev/) for testing. You can run the tes
 pnpm test
 ```
 
-## Styling
-
-This project uses [Tailwind CSS](https://tailwindcss.com/) for styling.
-
-
 ## Linting & Formatting
 
 This project uses [Biome](https://biomejs.dev/) for linting and formatting. The following scripts are available:
-
 
 ```bash
 pnpm lint
 pnpm format
 pnpm check
 ```
-
 
 ## Setting up Clerk
 
