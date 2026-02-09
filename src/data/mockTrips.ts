@@ -8,7 +8,7 @@ export interface Trip {
 	rating: number;
 	reviewCount: number;
 	isFavorite?: boolean;
-	isGuestFavorite?: boolean;
+	isCommunityGem?: boolean;
 	category: string;
 }
 
@@ -113,7 +113,7 @@ export const popularTripsFromTampa: Trip[] = [
 		duration: "3 nights",
 		rating: 4.92,
 		reviewCount: 248,
-		isGuestFavorite: true,
+		isCommunityGem: true,
 		category: "full-package",
 	},
 	{
@@ -126,7 +126,7 @@ export const popularTripsFromTampa: Trip[] = [
 		duration: "4 nights",
 		rating: 4.88,
 		reviewCount: 392,
-		isGuestFavorite: true,
+		isCommunityGem: true,
 		category: "full-package",
 	},
 	{
@@ -163,7 +163,7 @@ export const popularTripsFromTampa: Trip[] = [
 		duration: "3 nights",
 		rating: 4.91,
 		reviewCount: 312,
-		isGuestFavorite: true,
+		isCommunityGem: true,
 		category: "hotel",
 	},
 	{
@@ -191,7 +191,7 @@ export const trendingDestinations: Trip[] = [
 		duration: "5 nights",
 		rating: 4.96,
 		reviewCount: 542,
-		isGuestFavorite: true,
+		isCommunityGem: true,
 		category: "full-package",
 	},
 	{
@@ -204,7 +204,7 @@ export const trendingDestinations: Trip[] = [
 		duration: "7 nights",
 		rating: 4.94,
 		reviewCount: 623,
-		isGuestFavorite: true,
+		isCommunityGem: true,
 		category: "full-package",
 	},
 	{
@@ -229,7 +229,7 @@ export const trendingDestinations: Trip[] = [
 		duration: "6 nights",
 		rating: 4.97,
 		reviewCount: 721,
-		isGuestFavorite: true,
+		isCommunityGem: true,
 		category: "full-package",
 	},
 	{
@@ -242,7 +242,7 @@ export const trendingDestinations: Trip[] = [
 		duration: "5 nights",
 		rating: 4.98,
 		reviewCount: 892,
-		isGuestFavorite: true,
+		isCommunityGem: true,
 		category: "hotel",
 	},
 	{
@@ -270,7 +270,7 @@ export const beachDestinations: Trip[] = [
 		duration: "5 nights",
 		rating: 4.89,
 		reviewCount: 445,
-		isGuestFavorite: true,
+		isCommunityGem: true,
 		category: "hotel",
 	},
 	{
@@ -283,7 +283,7 @@ export const beachDestinations: Trip[] = [
 		duration: "6 nights",
 		rating: 4.95,
 		reviewCount: 612,
-		isGuestFavorite: true,
+		isCommunityGem: true,
 		category: "hotel",
 	},
 	{
@@ -308,7 +308,7 @@ export const beachDestinations: Trip[] = [
 		duration: "4 nights",
 		rating: 4.84,
 		reviewCount: 267,
-		isGuestFavorite: true,
+		isCommunityGem: true,
 		category: "hotel",
 	},
 	{
@@ -321,7 +321,7 @@ export const beachDestinations: Trip[] = [
 		duration: "7 nights",
 		rating: 4.99,
 		reviewCount: 923,
-		isGuestFavorite: true,
+		isCommunityGem: true,
 		category: "hotel",
 	},
 	{
@@ -349,7 +349,7 @@ export const adventureTrips: Trip[] = [
 		duration: "7 nights",
 		rating: 4.93,
 		reviewCount: 512,
-		isGuestFavorite: true,
+		isCommunityGem: true,
 		category: "full-package",
 	},
 	{
@@ -362,7 +362,7 @@ export const adventureTrips: Trip[] = [
 		duration: "5 nights",
 		rating: 4.96,
 		reviewCount: 634,
-		isGuestFavorite: true,
+		isCommunityGem: true,
 		category: "full-package",
 	},
 	{
@@ -375,7 +375,7 @@ export const adventureTrips: Trip[] = [
 		duration: "10 nights",
 		rating: 4.98,
 		reviewCount: 789,
-		isGuestFavorite: true,
+		isCommunityGem: true,
 		category: "full-package",
 	},
 	{
@@ -400,7 +400,7 @@ export const adventureTrips: Trip[] = [
 		duration: "8 nights",
 		rating: 4.97,
 		reviewCount: 456,
-		isGuestFavorite: true,
+		isCommunityGem: true,
 		category: "full-package",
 	},
 	{
@@ -413,7 +413,7 @@ export const adventureTrips: Trip[] = [
 		duration: "9 nights",
 		rating: 4.99,
 		reviewCount: 712,
-		isGuestFavorite: true,
+		isCommunityGem: true,
 		category: "excursion",
 	},
 ];

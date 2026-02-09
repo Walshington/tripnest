@@ -1,4 +1,4 @@
-import { Heart, Star } from "lucide-react";
+import { Gem, Heart, Star } from "lucide-react";
 import { useState } from "react";
 import type { Trip } from "@/data/mockTrips";
 
@@ -38,30 +38,33 @@ export default function TripCard({ trip }: TripCardProps) {
 				<img
 					src={trip.imageUrl}
 					alt={trip.title}
-					className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+					className="w-full h-full object-cover"
 				/>
 
-				{/* Favorite Button */}
-				<button
-					type="button"
-					onClick={toggleFavorite}
-					className="absolute top-3 right-3 p-2 hover:scale-110 transition-transform z-10"
-					aria-label={isFavorite ? "Remove from favorites" : "Add to favorites"}
-				>
-					<Heart
-						size={24}
-						className={`${isFavorite ? "fill-[#FF385C] stroke-[#FF385C]" : "fill-white/70 stroke-white"} drop-shadow-md`}
-					/>
-				</button>
-
-				{/* Guest Favorite Badge */}
-				{trip.isGuestFavorite && (
-					<div className="absolute top-3 left-3 bg-white px-3 py-1 rounded-full shadow-md">
-						<span className="text-xs font-semibold text-gray-900">
-							Guest favorite
-						</span>
-					</div>
-				)}
+				{/* Top row: Community Gem (left) + Favorite (right), aligned */}
+				<div className="absolute top-3 left-3 right-3 z-10 flex items-center justify-between pointer-events-none">
+					{trip.isCommunityGem ? (
+						<div className="pointer-events-auto bg-white px-3 py-1 rounded-full shadow-md flex items-center gap-1.5">
+							<Gem size={14} className="shrink-0 text-gray-900" />
+							<span className="text-xs font-semibold text-gray-900">
+								Community Gem
+							</span>
+						</div>
+					) : (
+						<div />
+					)}
+					<button
+						type="button"
+						onClick={toggleFavorite}
+						className="pointer-events-auto p-2 hover:scale-110 transition-transform -m-2"
+						aria-label={isFavorite ? "Remove from favorites" : "Add to favorites"}
+					>
+						<Heart
+							size={24}
+							className={`${isFavorite ? "fill-[#FF385C] stroke-[#FF385C]" : "fill-white/70 stroke-white"} drop-shadow-md`}
+						/>
+					</button>
+				</div>
 			</div>
 
 			<div className="space-y-1">
