@@ -8,10 +8,10 @@ import {
 import { TanStackRouterDevtoolsPanel } from "@tanstack/react-router-devtools";
 import type { TRPCOptionsProxy } from "@trpc/tanstack-react-query";
 import type { TRPCRouter } from "@/integrations/trpc/router";
-import Header from "../components/Header";
-import ClerkProvider from "../integrations/clerk/provider";
-import TanStackQueryDevtools from "../integrations/tanstack-query/devtools";
-import appCss from "../styles.css?url";
+import Header from "@/components/Header";
+import ClerkProvider from "@/integrations/clerk/provider";
+import TanStackQueryDevtools from "@/integrations/tanstack-query/devtools";
+import appCss from "@/styles.css?url";
 
 interface MyRouterContext {
 	queryClient: QueryClient;

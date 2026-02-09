@@ -1,6 +1,6 @@
 import { drizzle } from "drizzle-orm/node-postgres";
 
-import * as schema from "./schema.ts";
+import * as schema from "@/db/schema";
 
 const url = process.env.POSTGRES_URL;
 if (!url) throw new Error("POSTGRES_URL environment variable is required");
