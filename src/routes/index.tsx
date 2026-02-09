@@ -13,11 +13,11 @@ function Home() {
 					</h1>
 				</SignedIn>
 				<SignedOut>
-					<SignInButton>	
+					<SignInButton>
 						<h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
 							TripNest Signed Out
 						</h1>
-					</SignInButton>	
+					</SignInButton>
 				</SignedOut>
 
 				<p className="text-lg text-gray-400">Your landing page goes here.</p>
